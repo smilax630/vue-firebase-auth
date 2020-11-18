@@ -1,0 +1,11 @@
+version: "2.4"
+
+services:
+  node:
+    image: node:latest
+    ports: 
+      - 8080:8080
+    volumes:
+      - .:/srv:cached
+    working_dir: /srv
+    command: yarn serve
